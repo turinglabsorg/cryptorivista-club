@@ -60,12 +60,12 @@ function Body() {
     let start = new Date(fullday + ' ' + split[0] + ':00').getTime()
     let end = new Date(fullday + ' ' + split[1] + ':00').getTime()
     let now = new Date().getTime()
-    
+
     if(now >= start && now <= end){
       canShow = true
     }
 
-    if (scheduled === "-" || !canShow) {
+    if (scheduled === "-" || !canShow || config.IS_ADMIN) {
       return <div className="row">
         <div className="col-12">
           <b>Al momento non c'è nessun live,<br></br>ritorna in uno di questi orari:</b>

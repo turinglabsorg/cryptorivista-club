@@ -1,3 +1,4 @@
 {
-    "SOURCE_URL": "LinkToYourLiveStream"
+    "SOURCE_URL": "LinkToYourLiveStream",
+    "IS_ADMIN": false
 }
