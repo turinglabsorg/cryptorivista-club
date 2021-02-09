@@ -10,9 +10,6 @@ body {
   background-repeat: no-repeat;
 }
 
-.overlay {
-  background-color: rgba(230, 230, 230, 0.947);
-}
 
 .video-js{
   width: 100%;
@@ -44,6 +41,27 @@ body {
 
 .App-link {
   color: #61dafb;
+}
+
+a {
+  color: #E4585D !important;
+  background-color: transparent;
+}
+
+.divider {
+     border-left:5px solid #E4585D; 
+}
+
+.divider2 {
+  border-right:8px dotted #E4585D; 
+}
+
+.divider3 {
+  border-bottom:8px dotted #E4585D; 
+}
+
+.no_bottom {
+  margin-bottom: 0;
 }
 
 @keyframes App-logo-spin {
