@@ -2,7 +2,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from "react";
 import './fonts/stylesheet.css';
 import VideoPlayer from "./VideoPlayer";
+import Card from 'react'
 import './App.css';
+import play from '../src/assets/play.svg';
 let config = require('./config.json')
 const axios = require('axios')
 
@@ -56,29 +58,31 @@ function Body() {
     let today = new Date().getDay()
     let scheduled = schedule[days[today]]
     let split = scheduled.split('-')
-    let fullday = new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate() 
+    let fullday = new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate()
     let start = new Date(fullday + ' ' + split[0] + ':00').getTime()
     let end = new Date(fullday + ' ' + split[1] + ':00').getTime()
     let now = new Date().getTime()
 
-    if(now >= start && now <= end){
+    if (now >= start && now <= end) {
       canShow = true
     }
 
     if (scheduled === "-" || !canShow || config.IS_ADMIN) {
-      return <div className="row">
-        <div className="col-12">
-          <b>Al momento non c'è nessun live,<br></br>ritorna in uno di questi orari:</b>
-          <br></br><br></br>
-          <b>Lunedì</b>: {schedule.LUN}<br></br>
-          <b>Martedì</b>: {schedule.MAR}<br></br>
-          <b>Mercoledì</b>: {schedule.MER}<br></br>
-          <b>Giovedì</b>: {schedule.GIO}<br></br>
-          <b>Venerdì</b>: {schedule.VEN}<br></br>
-          <b>Sabato</b>: {schedule.SAB}<br></br>
-          <b>Domenica</b>: {schedule.DOM}<br></br>
+      return (
+        <div className="row">
+          <div className="col-3">
+            <Card>
+                <div className="d-flex">
+                  <h1 style={{ fontWeight: "600", fontSize: "45px" }}>ON AIR</h1>
+                  <img style={{ width: "20%", margin: "0 10px" }} src={play}></img>
+                </div>
+            </Card>
+          </div>
+          <div className="col-9">
+            contenuto
+          </div>
         </div>
-      </div>
+      )
     } else {
       return <div className="row">
         <div className="col-12">

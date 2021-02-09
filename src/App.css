@@ -3,6 +3,17 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
+body {
+  background-image: url('/src/assets/rvst_bg2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.overlay {
+  background-color: rgba(230, 230, 230, 0.947);
+}
+
 .video-js{
   width: 100%;
   height:55vh;
