@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'degular';
+    src: url('degular-regular.woff2') format('woff2'),
+         url('degular-regular.woff') format('woff'),
+         url('degular-regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'degular-bold';
+    src: url('degular-bold.woff2') format('woff2'),
+         url('degular-bold.woff') format('woff'),
+         url('degular-bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
