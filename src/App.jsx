@@ -65,7 +65,7 @@ function Body() {
       canShow = true
     }
 
-    if (scheduled === "-" || !canShow || config.IS_ADMIN) {
+    if (!canShow && !config.IS_ADMIN) {
       return <div className="row">
         <div className="col-12">
           <b>Al momento non c'è nessun live,<br></br>ritorna in uno di questi orari:</b>
