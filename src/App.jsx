@@ -53,8 +53,8 @@ function Body() {
   let today = new Date().getDay()
   let scheduled = schedule[days[today]]
 
-  let interval = setInterval(function(){
-    if(!started){
+  let interval = setInterval(function () {
+    if (!started) {
       setChecking(false)
     }
   }, 5000)
@@ -104,9 +104,15 @@ function Body() {
               </div>
             </div>
             <div>
-              <img alt="Crypto Rivista" className="mb-4" style={{ height: "20px" }} src={rvst} /><br></br>
-              <img alt="Scrypta Foundation" className="mb-4" style={{ height: "40px" }} src={scrypta} /><br></br>
-              <img alt="Chainblock" style={{ height: "40px" }} src={chain} />
+              <a rel="noreferrer" href="http://cryptorivista.com/" target="_blank">
+                <img alt="Crypto Rivista" className="mb-4" style={{ height: "20px" }} src={rvst} /><br></br>
+              </a>
+              <a rel="noreferrer" href="https://scrypta.foundation" target="_blank">
+                <img alt="Scrypta Foundation" className="mb-4" style={{ height: "40px" }} src={scrypta} /><br></br>
+              </a>
+              <a rel="noreferrer" href="https://chainblock.it/" target="_blank">
+                <img alt="Chainblock" style={{ height: "40px" }} src={chain} />
+              </a>
             </div>
           </div>
         </div>
