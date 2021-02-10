@@ -55,7 +55,6 @@ function Body() {
 
   let interval = setInterval(function(){
     if(!started){
-      console.log('Checking if can show.')
       setChecking(false)
     }
   }, 5000)
